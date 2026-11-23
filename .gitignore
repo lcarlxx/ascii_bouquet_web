@@ -1,0 +1,11 @@
+node_modules
+dist
+.DS_Store
+*.local
+*.log
+.vercel
+
+# Never commit secrets. Copy .env.example if you ever add one.
+.env
+.env.*
+!.env.example

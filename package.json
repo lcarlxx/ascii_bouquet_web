@@ -1,0 +1,47 @@
+{
+  "name": "ascii-bouquet-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A spinning ASCII bouquet you can remix in the browser, then share with a link.",
+  "license": "MIT",
+  "keywords": [
+    "ascii-art",
+    "generative-art",
+    "bouquet",
+    "react",
+    "vite",
+    "webgl",
+    "three",
+    "creative-coding"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcarlxx/ascii_bouquet_web.git"
+  },
+  "homepage": "https://github.com/lcarlxx/ascii_bouquet_web",
+  "bugs": {
+    "url": "https://github.com/lcarlxx/ascii_bouquet_web/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "framer-motion": "^12.6.0",
+    "lucide-react": "^0.487.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.2.0"
+  }
+}
