@@ -109,17 +109,18 @@ npx vercel        # first deploy, links the project
 npx vercel --prod # production
 ```
 
-### Netlify, Cloudflare Pages, GitHub Pages, any static host
+### GitHub Pages
+
+`.github/workflows/deploy.yml` builds `dist/` with Vite (`base: './'`) and deploys it on every push to `main`. In your repository settings (**Settings → Pages → Build and deployment**), set **Source** to **GitHub Actions**. Because share links store settings in `?b=…` query parameters, they work natively on GitHub Pages without server rewrites; the `<meta http-equiv="Content-Security-Policy">` tag in `index.html` enforces the CSP where custom HTTP headers are unavailable.
+
+### Netlify, Cloudflare Pages, any static host
 
 The build is a static SPA. You need:
 
 - Build command: `npm run build`
 - Output directory: `dist`
-- **A catch-all rewrite to `/index.html`** so shared links work.
 
-On Netlify, a `netlify.toml` with `[[redirects]] from = "/*" to = "/index.html" status = 200` is enough. On Cloudflare Pages set the same in the dashboard. GitHub Pages does not support rewrites; use hash routing or a 404 redirect trick if you must host there.
-
-Copy the `headers` block from `vercel.json` into whatever your host calls them (e.g. `_headers` on Netlify/Cloudflare) to keep the CSP.
+On Netlify, a `netlify.toml` with `[[redirects]] from = "/*" to = "/index.html" status = 200` handles path rewrites; on Cloudflare Pages set the same in the dashboard. Copy the `headers` block from `vercel.json` into `_headers` on hosts that support custom response headers.
 
 ---
 
