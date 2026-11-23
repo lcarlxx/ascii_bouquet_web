@@ -4,7 +4,7 @@
 
 This is an open-source (MIT) plaything: no accounts, no server, no database, no tracking. One page, one canvas full of terminal characters, and a small studio drawer that edits every number behind it.
 
-> Origin: this began as a gift project around a Python terminal script, `bouquet3d.py`. That script is still in the repo and is still the reference renderer — the browser engine is a faithful JavaScript port of it, and the "Source" button in the viewer shows the same script tuned to whatever is currently on screen.
+> Origin: this began as a gift project around a Python terminal script, `bouquet3d.py` that I sourced from a repo made by [alishsharma17](https://github.com/alishsharma17/Ascii-Flower-Bouquet- "Go to Repo!"). That script is still in this repo and is still the reference renderer — the browser engine is a faithful JavaScript port of it, and the "Source" button in the viewer shows the same script tuned to whatever is currently on screen.
 
 ---
 
